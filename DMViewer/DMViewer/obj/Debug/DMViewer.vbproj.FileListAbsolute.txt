@@ -1,0 +1,15 @@
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\DMViewer.exe.config
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\pdfium.dll
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\DMViewer.exe
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\DMViewer.pdb
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\DMViewer.xml
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\Patagames.Pdf.dll
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\Patagames.Pdf.WinForms.dll
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\Patagames.Pdf.xml
+D:\Projects\GGS\DMViewer\DMViewer\bin\Debug\Patagames.Pdf.WinForms.xml
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.DMViewer.resources
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.Resources.resources
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.vbproj.GenerateResource.Cache
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.exe
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.xml
+D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.pdb
