@@ -22,6 +22,7 @@ Partial Class DMViewer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DMViewer))
         Me.MessLabel = New System.Windows.Forms.Label()
         Me.Viewer = New PdfiumViewer.PdfViewer()
@@ -29,26 +30,7 @@ Partial Class DMViewer
         Me.toolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.toolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.SearchText = New System.Windows.Forms.ToolStripTextBox()
-        Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.toolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me._zoom = New System.Windows.Forms.ToolStripTextBox()
-        Me.toolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me._fitWidth = New System.Windows.Forms.ToolStripButton()
-        Me._fitHeight = New System.Windows.Forms.ToolStripButton()
-        Me._fitBest = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me._rotateLeft = New System.Windows.Forms.ToolStripButton()
-        Me._rotateRight = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me._showToolbar = New System.Windows.Forms.ToolStripButton()
-        Me._showBookmarks = New System.Windows.Forms.ToolStripButton()
-        Me._getTextFromPage = New System.Windows.Forms.ToolStripButton()
         Me.menuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.fileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.openToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -75,6 +57,7 @@ Partial Class DMViewer
         Me.showRangeOfPagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
         Me.informationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.menuStrip1.SuspendLayout()
@@ -95,10 +78,10 @@ Partial Class DMViewer
         'Viewer
         '
         Me.Viewer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Viewer.Location = New System.Drawing.Point(0, 48)
+        Me.Viewer.Location = New System.Drawing.Point(0, 62)
         Me.Viewer.Margin = New System.Windows.Forms.Padding(20)
         Me.Viewer.Name = "Viewer"
-        Me.Viewer.Size = New System.Drawing.Size(1761, 461)
+        Me.Viewer.Size = New System.Drawing.Size(1761, 447)
         Me.Viewer.TabIndex = 0
         '
         'Panel1
@@ -110,13 +93,13 @@ Partial Class DMViewer
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1761, 48)
+        Me.Panel1.Size = New System.Drawing.Size(1761, 62)
         Me.Panel1.TabIndex = 4
         '
         'toolStrip1
         '
         Me.toolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripLabel1, Me.SearchText, Me.toolStripSeparator1, Me.toolStripButton1, Me.toolStripButton2, Me.toolStripSeparator2, Me.toolStripLabel2, Me._zoom, Me.toolStripSeparator7, Me.toolStripButton4, Me.toolStripButton3, Me.toolStripSeparator3, Me._fitWidth, Me._fitHeight, Me._fitBest, Me.toolStripSeparator5, Me._rotateLeft, Me._rotateRight, Me.toolStripSeparator6, Me._showToolbar, Me._showBookmarks, Me._getTextFromPage})
+        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripLabel1, Me.SearchText, Me.toolStripButton2})
         Me.toolStrip1.Location = New System.Drawing.Point(0, 28)
         Me.toolStrip1.Name = "toolStrip1"
         Me.toolStrip1.Size = New System.Drawing.Size(1759, 27)
@@ -134,157 +117,14 @@ Partial Class DMViewer
         Me.SearchText.Name = "SearchText"
         Me.SearchText.Size = New System.Drawing.Size(132, 27)
         '
-        'toolStripSeparator1
-        '
-        Me.toolStripSeparator1.Name = "toolStripSeparator1"
-        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 27)
-        '
-        'toolStripButton1
-        '
-        Me.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.toolStripButton1.Image = CType(resources.GetObject("toolStripButton1.Image"), System.Drawing.Image)
-        Me.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolStripButton1.Name = "toolStripButton1"
-        Me.toolStripButton1.Size = New System.Drawing.Size(23, 24)
-        Me.toolStripButton1.Text = "<"
-        '
         'toolStripButton2
         '
         Me.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.toolStripButton2.Image = CType(resources.GetObject("toolStripButton2.Image"), System.Drawing.Image)
         Me.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.toolStripButton2.Name = "toolStripButton2"
-        Me.toolStripButton2.Size = New System.Drawing.Size(23, 24)
-        Me.toolStripButton2.Text = ">"
-        '
-        'toolStripSeparator2
-        '
-        Me.toolStripSeparator2.Name = "toolStripSeparator2"
-        Me.toolStripSeparator2.Size = New System.Drawing.Size(6, 27)
-        '
-        'toolStripLabel2
-        '
-        Me.toolStripLabel2.Name = "toolStripLabel2"
-        Me.toolStripLabel2.Size = New System.Drawing.Size(52, 24)
-        Me.toolStripLabel2.Text = "Zoom:"
-        '
-        '_zoom
-        '
-        Me._zoom.Name = "_zoom"
-        Me._zoom.Size = New System.Drawing.Size(132, 27)
-        '
-        'toolStripSeparator7
-        '
-        Me.toolStripSeparator7.Name = "toolStripSeparator7"
-        Me.toolStripSeparator7.Size = New System.Drawing.Size(6, 27)
-        '
-        'toolStripButton4
-        '
-        Me.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.toolStripButton4.Image = CType(resources.GetObject("toolStripButton4.Image"), System.Drawing.Image)
-        Me.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolStripButton4.Name = "toolStripButton4"
-        Me.toolStripButton4.Size = New System.Drawing.Size(23, 24)
-        Me.toolStripButton4.Text = "+"
-        '
-        'toolStripButton3
-        '
-        Me.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.toolStripButton3.Image = CType(resources.GetObject("toolStripButton3.Image"), System.Drawing.Image)
-        Me.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolStripButton3.Name = "toolStripButton3"
-        Me.toolStripButton3.Size = New System.Drawing.Size(23, 24)
-        Me.toolStripButton3.Text = "-"
-        '
-        'toolStripSeparator3
-        '
-        Me.toolStripSeparator3.Name = "toolStripSeparator3"
-        Me.toolStripSeparator3.Size = New System.Drawing.Size(6, 27)
-        '
-        '_fitWidth
-        '
-        Me._fitWidth.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._fitWidth.Image = CType(resources.GetObject("_fitWidth.Image"), System.Drawing.Image)
-        Me._fitWidth.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._fitWidth.Name = "_fitWidth"
-        Me._fitWidth.Size = New System.Drawing.Size(73, 24)
-        Me._fitWidth.Text = "Fit Width"
-        '
-        '_fitHeight
-        '
-        Me._fitHeight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._fitHeight.Image = CType(resources.GetObject("_fitHeight.Image"), System.Drawing.Image)
-        Me._fitHeight.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._fitHeight.Name = "_fitHeight"
-        Me._fitHeight.Size = New System.Drawing.Size(78, 24)
-        Me._fitHeight.Text = "Fit Height"
-        '
-        '_fitBest
-        '
-        Me._fitBest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._fitBest.Image = CType(resources.GetObject("_fitBest.Image"), System.Drawing.Image)
-        Me._fitBest.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._fitBest.Name = "_fitBest"
-        Me._fitBest.Size = New System.Drawing.Size(61, 24)
-        Me._fitBest.Text = "Fit Best"
-        '
-        'toolStripSeparator5
-        '
-        Me.toolStripSeparator5.Name = "toolStripSeparator5"
-        Me.toolStripSeparator5.Size = New System.Drawing.Size(6, 27)
-        '
-        '_rotateLeft
-        '
-        Me._rotateLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._rotateLeft.Image = CType(resources.GetObject("_rotateLeft.Image"), System.Drawing.Image)
-        Me._rotateLeft.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._rotateLeft.Name = "_rotateLeft"
-        Me._rotateLeft.Size = New System.Drawing.Size(86, 24)
-        Me._rotateLeft.Text = "Rotate Left"
-        '
-        '_rotateRight
-        '
-        Me._rotateRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._rotateRight.Image = CType(resources.GetObject("_rotateRight.Image"), System.Drawing.Image)
-        Me._rotateRight.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._rotateRight.Name = "_rotateRight"
-        Me._rotateRight.Size = New System.Drawing.Size(96, 24)
-        Me._rotateRight.Text = "Rotate Right"
-        '
-        'toolStripSeparator6
-        '
-        Me.toolStripSeparator6.Name = "toolStripSeparator6"
-        Me.toolStripSeparator6.Size = New System.Drawing.Size(6, 27)
-        '
-        '_showToolbar
-        '
-        Me._showToolbar.CheckOnClick = True
-        Me._showToolbar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._showToolbar.Image = CType(resources.GetObject("_showToolbar.Image"), System.Drawing.Image)
-        Me._showToolbar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._showToolbar.Name = "_showToolbar"
-        Me._showToolbar.Size = New System.Drawing.Size(104, 24)
-        Me._showToolbar.Text = "Show Toolbar"
-        '
-        '_showBookmarks
-        '
-        Me._showBookmarks.CheckOnClick = True
-        Me._showBookmarks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._showBookmarks.Image = CType(resources.GetObject("_showBookmarks.Image"), System.Drawing.Image)
-        Me._showBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._showBookmarks.Name = "_showBookmarks"
-        Me._showBookmarks.Size = New System.Drawing.Size(126, 24)
-        Me._showBookmarks.Text = "Show Bookmarks"
-        '
-        '_getTextFromPage
-        '
-        Me._getTextFromPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me._getTextFromPage.Image = CType(resources.GetObject("_getTextFromPage.Image"), System.Drawing.Image)
-        Me._getTextFromPage.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me._getTextFromPage.Name = "_getTextFromPage"
-        Me._getTextFromPage.Size = New System.Drawing.Size(67, 24)
-        Me._getTextFromPage.Text = "Get Text"
-        Me._getTextFromPage.ToolTipText = "Get Text From Current Page"
+        Me.toolStripButton2.Size = New System.Drawing.Size(41, 24)
+        Me.toolStripButton2.Text = "Find"
         '
         'menuStrip1
         '
@@ -474,26 +314,7 @@ Partial Class DMViewer
     Private WithEvents toolStrip1 As ToolStrip
     Private WithEvents toolStripLabel1 As ToolStripLabel
     Private WithEvents SearchText As ToolStripTextBox
-    Private WithEvents toolStripSeparator1 As ToolStripSeparator
-    Private WithEvents toolStripButton1 As ToolStripButton
     Private WithEvents toolStripButton2 As ToolStripButton
-    Private WithEvents toolStripSeparator2 As ToolStripSeparator
-    Private WithEvents toolStripLabel2 As ToolStripLabel
-    Private WithEvents _zoom As ToolStripTextBox
-    Private WithEvents toolStripSeparator7 As ToolStripSeparator
-    Private WithEvents toolStripButton4 As ToolStripButton
-    Private WithEvents toolStripButton3 As ToolStripButton
-    Private WithEvents toolStripSeparator3 As ToolStripSeparator
-    Private WithEvents _fitWidth As ToolStripButton
-    Private WithEvents _fitHeight As ToolStripButton
-    Private WithEvents _fitBest As ToolStripButton
-    Private WithEvents toolStripSeparator5 As ToolStripSeparator
-    Private WithEvents _rotateLeft As ToolStripButton
-    Private WithEvents _rotateRight As ToolStripButton
-    Private WithEvents toolStripSeparator6 As ToolStripSeparator
-    Private WithEvents _showToolbar As ToolStripButton
-    Private WithEvents _showBookmarks As ToolStripButton
-    Private WithEvents _getTextFromPage As ToolStripButton
     Private WithEvents menuStrip1 As MenuStrip
     Private WithEvents fileToolStripMenuItem As ToolStripMenuItem
     Private WithEvents openToolStripMenuItem As ToolStripMenuItem
@@ -520,4 +341,5 @@ Partial Class DMViewer
     Private WithEvents showRangeOfPagesToolStripMenuItem As ToolStripMenuItem
     Private WithEvents toolStripMenuItem6 As ToolStripSeparator
     Private WithEvents informationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -13,7 +13,6 @@ D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.vbproj.GenerateResource.Cac
 D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.exe
 D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.xml
 D:\Projects\GGS\DMViewer\DMViewer\obj\Debug\DMViewer.pdb
-C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.vbprojAssemblyReference.cache
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.DMViewer.resources
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.Resources.resources
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.vbproj.GenerateResource.cache
@@ -21,7 +20,6 @@ C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.vbproj.Co
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.exe
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.xml
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.pdb
-C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\x86\pdfium.dll
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\pdfium.dll
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\DMViewer.exe.config
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\DMViewer.exe
@@ -31,3 +29,4 @@ C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\PdfiumViewer.dll
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\PdfiumViewer.xml
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\nl\PdfiumViewer.resources.dll
 C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\obj\Debug\DMViewer.vbproj.CopyComplete
+C:\Users\amuir\Documents\DMViewer\DMViewer\DMViewer\bin\Debug\x86\pdfium.dll
