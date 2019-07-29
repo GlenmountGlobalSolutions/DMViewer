@@ -22,261 +22,324 @@ Partial Class DMViewer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DMViewer))
         Me.MessLabel = New System.Windows.Forms.Label()
-        Me.Viewer = New Patagames.Pdf.Net.Controls.WinForms.PdfViewer()
+        Me.Viewer = New PdfiumViewer.PdfViewer()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.SearchFlag = New System.Windows.Forms.Label()
-        Me.cbWholeWord = New System.Windows.Forms.CheckBox()
-        Me.FindNextButton = New System.Windows.Forms.Button()
-        Me.SearchText = New System.Windows.Forms.TextBox()
-        Me.SearchButton = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.PointerSelect = New System.Windows.Forms.ToolStripButton()
-        Me.PanSelect = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ZoomIn = New System.Windows.Forms.ToolStripButton()
-        Me.ZoomReset = New System.Windows.Forms.ToolStripButton()
-        Me.ZoomOut = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.toolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.SearchText = New System.Windows.Forms.ToolStripTextBox()
+        Me.toolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.menuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.fileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.openToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.printPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.printMultiplePagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.exitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.findToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.renderToBitmapsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.cutMarginsWhenPrintingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.shrinkToMarginsWhenPrintingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.deleteCurrentPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.rotateCurrentPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.rotate0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.rotate90ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.rotate180ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.rotate270ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.showRangeOfPagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.informationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        Me.toolStrip1.SuspendLayout()
+        Me.menuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MessLabel
         '
         Me.MessLabel.BackColor = System.Drawing.SystemColors.Info
-        Me.MessLabel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.MessLabel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.MessLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MessLabel.Location = New System.Drawing.Point(0, 64)
-        Me.MessLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.MessLabel.Location = New System.Drawing.Point(0, 509)
         Me.MessLabel.Name = "MessLabel"
-        Me.MessLabel.Size = New System.Drawing.Size(1117, 27)
+        Me.MessLabel.Size = New System.Drawing.Size(1761, 44)
         Me.MessLabel.TabIndex = 2
         Me.MessLabel.Text = "     Message"
         Me.MessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Viewer
         '
-        Me.Viewer.AllowSetDocument = False
-        Me.Viewer.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Viewer.CurrentIndex = -1
-        Me.Viewer.CurrentPageHighlightColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Viewer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Viewer.Document = Nothing
-        Me.Viewer.FormHighlightColor = System.Drawing.Color.Transparent
-        Me.Viewer.FormsBlendMode = Patagames.Pdf.Enums.BlendTypes.FXDIB_BLEND_MULTIPLY
-        Me.Viewer.LoadingIconText = "Loading..."
-        Me.Viewer.Location = New System.Drawing.Point(0, 99)
-        Me.Viewer.MouseMode = Patagames.Pdf.Net.Controls.WinForms.MouseModes.[Default]
+        Me.Viewer.Location = New System.Drawing.Point(0, 62)
+        Me.Viewer.Margin = New System.Windows.Forms.Padding(20)
         Me.Viewer.Name = "Viewer"
-        Me.Viewer.Padding = New System.Windows.Forms.Padding(10)
-        Me.Viewer.PageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Viewer.PageAutoDispose = True
-        Me.Viewer.PageBackColor = System.Drawing.Color.White
-        Me.Viewer.PageBorderColor = System.Drawing.Color.Black
-        Me.Viewer.PageMargin = New System.Windows.Forms.Padding(10)
-        Me.Viewer.PageSeparatorColor = System.Drawing.Color.Gray
-        Me.Viewer.RenderFlags = CType((Patagames.Pdf.Enums.RenderFlags.FPDF_LCD_TEXT Or Patagames.Pdf.Enums.RenderFlags.FPDF_NO_CATCH), Patagames.Pdf.Enums.RenderFlags)
-        Me.Viewer.ShowCurrentPageHighlight = True
-        Me.Viewer.ShowLoadingIcon = True
-        Me.Viewer.ShowPageSeparator = True
-        Me.Viewer.Size = New System.Drawing.Size(1117, 350)
-        Me.Viewer.SizeMode = Patagames.Pdf.Net.Controls.WinForms.SizeModes.Zoom
-        Me.Viewer.TabIndex = 3
-        Me.Viewer.TextSelectColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.Viewer.TilesCount = 2
-        Me.Viewer.UseProgressiveRender = True
-        Me.Viewer.ViewMode = Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical
-        Me.Viewer.Zoom = 1.0!
+        Me.Viewer.Size = New System.Drawing.Size(1761, 447)
+        Me.Viewer.TabIndex = 0
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.SearchFlag)
-        Me.Panel1.Controls.Add(Me.cbWholeWord)
-        Me.Panel1.Controls.Add(Me.FindNextButton)
-        Me.Panel1.Controls.Add(Me.SearchText)
-        Me.Panel1.Controls.Add(Me.SearchButton)
+        Me.Panel1.Controls.Add(Me.toolStrip1)
+        Me.Panel1.Controls.Add(Me.menuStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 25)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1117, 39)
+        Me.Panel1.Size = New System.Drawing.Size(1761, 62)
         Me.Panel1.TabIndex = 4
         '
-        'SearchFlag
+        'toolStrip1
         '
-        Me.SearchFlag.AutoSize = True
-        Me.SearchFlag.ForeColor = System.Drawing.Color.Red
-        Me.SearchFlag.Location = New System.Drawing.Point(436, 15)
-        Me.SearchFlag.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.SearchFlag.Name = "SearchFlag"
-        Me.SearchFlag.Size = New System.Drawing.Size(124, 13)
-        Me.SearchFlag.TabIndex = 5
-        Me.SearchFlag.Text = "Searching, Please wait..."
-        Me.SearchFlag.Visible = False
+        Me.toolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripLabel1, Me.SearchText, Me.toolStripButton2})
+        Me.toolStrip1.Location = New System.Drawing.Point(0, 28)
+        Me.toolStrip1.Name = "toolStrip1"
+        Me.toolStrip1.Size = New System.Drawing.Size(1759, 27)
+        Me.toolStrip1.TabIndex = 8
+        Me.toolStrip1.Text = "toolStrip1"
         '
-        'cbWholeWord
+        'toolStripLabel1
         '
-        Me.cbWholeWord.AutoSize = True
-        Me.cbWholeWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbWholeWord.Location = New System.Drawing.Point(264, 13)
-        Me.cbWholeWord.Margin = New System.Windows.Forms.Padding(2)
-        Me.cbWholeWord.Name = "cbWholeWord"
-        Me.cbWholeWord.Size = New System.Drawing.Size(116, 17)
-        Me.cbWholeWord.TabIndex = 4
-        Me.cbWholeWord.Text = "Match Whole Word"
-        Me.cbWholeWord.UseVisualStyleBackColor = True
-        '
-        'FindNextButton
-        '
-        Me.FindNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.FindNextButton.Location = New System.Drawing.Point(194, 10)
-        Me.FindNextButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.FindNextButton.Name = "FindNextButton"
-        Me.FindNextButton.Size = New System.Drawing.Size(56, 22)
-        Me.FindNextButton.TabIndex = 3
-        Me.FindNextButton.Text = "Next"
-        Me.FindNextButton.UseVisualStyleBackColor = True
-        Me.FindNextButton.Visible = False
+        Me.toolStripLabel1.Name = "toolStripLabel1"
+        Me.toolStripLabel1.Size = New System.Drawing.Size(56, 24)
+        Me.toolStripLabel1.Text = "Search:"
         '
         'SearchText
         '
-        Me.SearchText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SearchText.Location = New System.Drawing.Point(70, 11)
-        Me.SearchText.Margin = New System.Windows.Forms.Padding(2)
         Me.SearchText.Name = "SearchText"
-        Me.SearchText.Size = New System.Drawing.Size(120, 20)
-        Me.SearchText.TabIndex = 2
+        Me.SearchText.Size = New System.Drawing.Size(132, 27)
         '
-        'SearchButton
+        'toolStripButton2
         '
-        Me.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SearchButton.Location = New System.Drawing.Point(9, 10)
-        Me.SearchButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.SearchButton.Name = "SearchButton"
-        Me.SearchButton.Size = New System.Drawing.Size(56, 22)
-        Me.SearchButton.TabIndex = 1
-        Me.SearchButton.Text = "Search"
-        Me.SearchButton.UseVisualStyleBackColor = True
+        Me.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.toolStripButton2.Image = CType(resources.GetObject("toolStripButton2.Image"), System.Drawing.Image)
+        Me.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStripButton2.Name = "toolStripButton2"
+        Me.toolStripButton2.Size = New System.Drawing.Size(41, 24)
+        Me.toolStripButton2.Text = "Find"
         '
-        'Panel2
+        'menuStrip1
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 91)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1117, 8)
-        Me.Panel2.TabIndex = 5
+        Me.menuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.fileToolStripMenuItem, Me.toolsToolStripMenuItem})
+        Me.menuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.menuStrip1.Name = "menuStrip1"
+        Me.menuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.menuStrip1.Size = New System.Drawing.Size(1759, 28)
+        Me.menuStrip1.TabIndex = 7
+        Me.menuStrip1.Text = "menuStrip1"
         '
-        'ToolStrip1
+        'fileToolStripMenuItem
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PointerSelect, Me.PanSelect, Me.ToolStripSeparator1, Me.ZoomIn, Me.ZoomReset, Me.ZoomOut})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1117, 25)
-        Me.ToolStrip1.TabIndex = 14
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.fileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.openToolStripMenuItem, Me.toolStripMenuItem1, Me.printPreviewToolStripMenuItem, Me.printMultiplePagesToolStripMenuItem, Me.toolStripMenuItem3, Me.exitToolStripMenuItem})
+        Me.fileToolStripMenuItem.Name = "fileToolStripMenuItem"
+        Me.fileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+        Me.fileToolStripMenuItem.Text = "&File"
         '
-        'PointerSelect
+        'openToolStripMenuItem
         '
-        Me.PointerSelect.Checked = True
-        Me.PointerSelect.CheckOnClick = True
-        Me.PointerSelect.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.PointerSelect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PointerSelect.Image = CType(resources.GetObject("PointerSelect.Image"), System.Drawing.Image)
-        Me.PointerSelect.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PointerSelect.Name = "PointerSelect"
-        Me.PointerSelect.Size = New System.Drawing.Size(23, 22)
-        Me.PointerSelect.Text = "ToolStripButton1"
-        Me.PointerSelect.ToolTipText = "PointerTool"
+        Me.openToolStripMenuItem.Name = "openToolStripMenuItem"
+        Me.openToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.openToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.openToolStripMenuItem.Text = "&Open"
         '
-        'PanSelect
+        'toolStripMenuItem1
         '
-        Me.PanSelect.CheckOnClick = True
-        Me.PanSelect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PanSelect.Image = CType(resources.GetObject("PanSelect.Image"), System.Drawing.Image)
-        Me.PanSelect.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PanSelect.Name = "PanSelect"
-        Me.PanSelect.Size = New System.Drawing.Size(23, 22)
-        Me.PanSelect.Text = "ToolStripButton2"
-        Me.PanSelect.ToolTipText = "Pan Tool"
+        Me.toolStripMenuItem1.Name = "toolStripMenuItem1"
+        Me.toolStripMenuItem1.Size = New System.Drawing.Size(212, 6)
         '
-        'ToolStripSeparator1
+        'printPreviewToolStripMenuItem
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem"
+        Me.printPreviewToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.printPreviewToolStripMenuItem.Text = "Print Preview"
         '
-        'ZoomIn
+        'printMultiplePagesToolStripMenuItem
         '
-        Me.ZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ZoomIn.Image = CType(resources.GetObject("ZoomIn.Image"), System.Drawing.Image)
-        Me.ZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ZoomIn.Name = "ZoomIn"
-        Me.ZoomIn.Size = New System.Drawing.Size(23, 22)
-        Me.ZoomIn.Text = "ToolStripButton3"
-        Me.ZoomIn.ToolTipText = "Zoom In"
+        Me.printMultiplePagesToolStripMenuItem.Name = "printMultiplePagesToolStripMenuItem"
+        Me.printMultiplePagesToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.printMultiplePagesToolStripMenuItem.Text = "Print Multiple Pages"
         '
-        'ZoomReset
+        'toolStripMenuItem3
         '
-        Me.ZoomReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ZoomReset.Image = CType(resources.GetObject("ZoomReset.Image"), System.Drawing.Image)
-        Me.ZoomReset.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ZoomReset.Name = "ZoomReset"
-        Me.ZoomReset.Size = New System.Drawing.Size(23, 22)
-        Me.ZoomReset.Text = "ToolStripButton4"
-        Me.ZoomReset.ToolTipText = "Zoom Reset"
+        Me.toolStripMenuItem3.Name = "toolStripMenuItem3"
+        Me.toolStripMenuItem3.Size = New System.Drawing.Size(212, 6)
         '
-        'ZoomOut
+        'exitToolStripMenuItem
         '
-        Me.ZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ZoomOut.Image = CType(resources.GetObject("ZoomOut.Image"), System.Drawing.Image)
-        Me.ZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ZoomOut.Name = "ZoomOut"
-        Me.ZoomOut.Size = New System.Drawing.Size(23, 22)
-        Me.ZoomOut.Text = "ToolStripButton5"
-        Me.ZoomOut.ToolTipText = "Zoom Out"
+        Me.exitToolStripMenuItem.Name = "exitToolStripMenuItem"
+        Me.exitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
+        Me.exitToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
+        Me.exitToolStripMenuItem.Text = "E&xit"
+        '
+        'toolsToolStripMenuItem
+        '
+        Me.toolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.findToolStripMenuItem, Me.toolStripMenuItem7, Me.renderToBitmapsToolStripMenuItem, Me.toolStripMenuItem2, Me.cutMarginsWhenPrintingToolStripMenuItem, Me.shrinkToMarginsWhenPrintingToolStripMenuItem, Me.toolStripMenuItem4, Me.deleteCurrentPageToolStripMenuItem, Me.rotateCurrentPageToolStripMenuItem, Me.toolStripMenuItem5, Me.showRangeOfPagesToolStripMenuItem, Me.toolStripMenuItem6, Me.informationToolStripMenuItem})
+        Me.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem"
+        Me.toolsToolStripMenuItem.Size = New System.Drawing.Size(56, 24)
+        Me.toolsToolStripMenuItem.Text = "&Tools"
+        '
+        'findToolStripMenuItem
+        '
+        Me.findToolStripMenuItem.Name = "findToolStripMenuItem"
+        Me.findToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
+        Me.findToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.findToolStripMenuItem.Text = "&Find"
+        '
+        'toolStripMenuItem7
+        '
+        Me.toolStripMenuItem7.Name = "toolStripMenuItem7"
+        Me.toolStripMenuItem7.Size = New System.Drawing.Size(291, 6)
+        '
+        'renderToBitmapsToolStripMenuItem
+        '
+        Me.renderToBitmapsToolStripMenuItem.Name = "renderToBitmapsToolStripMenuItem"
+        Me.renderToBitmapsToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.renderToBitmapsToolStripMenuItem.Text = "&Render to Bitmaps"
+        '
+        'toolStripMenuItem2
+        '
+        Me.toolStripMenuItem2.Name = "toolStripMenuItem2"
+        Me.toolStripMenuItem2.Size = New System.Drawing.Size(291, 6)
+        '
+        'cutMarginsWhenPrintingToolStripMenuItem
+        '
+        Me.cutMarginsWhenPrintingToolStripMenuItem.Name = "cutMarginsWhenPrintingToolStripMenuItem"
+        Me.cutMarginsWhenPrintingToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.cutMarginsWhenPrintingToolStripMenuItem.Text = "Cut margins when printing"
+        '
+        'shrinkToMarginsWhenPrintingToolStripMenuItem
+        '
+        Me.shrinkToMarginsWhenPrintingToolStripMenuItem.Name = "shrinkToMarginsWhenPrintingToolStripMenuItem"
+        Me.shrinkToMarginsWhenPrintingToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.shrinkToMarginsWhenPrintingToolStripMenuItem.Text = "Shrink to margins when printing"
+        '
+        'toolStripMenuItem4
+        '
+        Me.toolStripMenuItem4.Name = "toolStripMenuItem4"
+        Me.toolStripMenuItem4.Size = New System.Drawing.Size(291, 6)
+        '
+        'deleteCurrentPageToolStripMenuItem
+        '
+        Me.deleteCurrentPageToolStripMenuItem.Name = "deleteCurrentPageToolStripMenuItem"
+        Me.deleteCurrentPageToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.deleteCurrentPageToolStripMenuItem.Text = "Delete Current Page"
+        '
+        'rotateCurrentPageToolStripMenuItem
+        '
+        Me.rotateCurrentPageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.rotate0ToolStripMenuItem, Me.rotate90ToolStripMenuItem, Me.rotate180ToolStripMenuItem, Me.rotate270ToolStripMenuItem})
+        Me.rotateCurrentPageToolStripMenuItem.Name = "rotateCurrentPageToolStripMenuItem"
+        Me.rotateCurrentPageToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.rotateCurrentPageToolStripMenuItem.Text = "Rotate Current Page"
+        '
+        'rotate0ToolStripMenuItem
+        '
+        Me.rotate0ToolStripMenuItem.Name = "rotate0ToolStripMenuItem"
+        Me.rotate0ToolStripMenuItem.Size = New System.Drawing.Size(162, 26)
+        Me.rotate0ToolStripMenuItem.Text = "Rotate 0°"
+        '
+        'rotate90ToolStripMenuItem
+        '
+        Me.rotate90ToolStripMenuItem.Name = "rotate90ToolStripMenuItem"
+        Me.rotate90ToolStripMenuItem.Size = New System.Drawing.Size(162, 26)
+        Me.rotate90ToolStripMenuItem.Text = "Rotate 90°"
+        '
+        'rotate180ToolStripMenuItem
+        '
+        Me.rotate180ToolStripMenuItem.Name = "rotate180ToolStripMenuItem"
+        Me.rotate180ToolStripMenuItem.Size = New System.Drawing.Size(162, 26)
+        Me.rotate180ToolStripMenuItem.Text = "Rotate 180°"
+        '
+        'rotate270ToolStripMenuItem
+        '
+        Me.rotate270ToolStripMenuItem.Name = "rotate270ToolStripMenuItem"
+        Me.rotate270ToolStripMenuItem.Size = New System.Drawing.Size(162, 26)
+        Me.rotate270ToolStripMenuItem.Text = "Rotate 270°"
+        '
+        'toolStripMenuItem5
+        '
+        Me.toolStripMenuItem5.Name = "toolStripMenuItem5"
+        Me.toolStripMenuItem5.Size = New System.Drawing.Size(291, 6)
+        '
+        'showRangeOfPagesToolStripMenuItem
+        '
+        Me.showRangeOfPagesToolStripMenuItem.Name = "showRangeOfPagesToolStripMenuItem"
+        Me.showRangeOfPagesToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.showRangeOfPagesToolStripMenuItem.Text = "Show range of pages"
+        '
+        'toolStripMenuItem6
+        '
+        Me.toolStripMenuItem6.Name = "toolStripMenuItem6"
+        Me.toolStripMenuItem6.Size = New System.Drawing.Size(291, 6)
+        '
+        'informationToolStripMenuItem
+        '
+        Me.informationToolStripMenuItem.Name = "informationToolStripMenuItem"
+        Me.informationToolStripMenuItem.Size = New System.Drawing.Size(294, 26)
+        Me.informationToolStripMenuItem.Text = "Information"
         '
         'DMViewer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1117, 449)
+        Me.ClientSize = New System.Drawing.Size(1761, 553)
         Me.Controls.Add(Me.Viewer)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.MessLabel)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "DMViewer"
         Me.Text = "DMViewer"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.toolStrip1.ResumeLayout(False)
+        Me.toolStrip1.PerformLayout()
+        Me.menuStrip1.ResumeLayout(False)
+        Me.menuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents MessLabel As System.Windows.Forms.Label
-    Friend WithEvents Viewer As Patagames.Pdf.Net.Controls.WinForms.PdfViewer
+    Friend WithEvents Viewer As PdfiumViewer.PdfViewer
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents SearchText As System.Windows.Forms.TextBox
-    Friend WithEvents SearchButton As System.Windows.Forms.Button
-    Friend WithEvents FindNextButton As System.Windows.Forms.Button
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents cbWholeWord As System.Windows.Forms.CheckBox
-    Friend WithEvents SearchFlag As System.Windows.Forms.Label
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents PointerSelect As System.Windows.Forms.ToolStripButton
-    Friend WithEvents PanSelect As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ZoomIn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ZoomReset As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ZoomOut As System.Windows.Forms.ToolStripButton
-
+    Private WithEvents toolStrip1 As ToolStrip
+    Private WithEvents toolStripLabel1 As ToolStripLabel
+    Private WithEvents SearchText As ToolStripTextBox
+    Private WithEvents toolStripButton2 As ToolStripButton
+    Private WithEvents menuStrip1 As MenuStrip
+    Private WithEvents fileToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents openToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem1 As ToolStripSeparator
+    Private WithEvents printPreviewToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents printMultiplePagesToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem3 As ToolStripSeparator
+    Private WithEvents exitToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolsToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents findToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem7 As ToolStripSeparator
+    Private WithEvents renderToBitmapsToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem2 As ToolStripSeparator
+    Private WithEvents cutMarginsWhenPrintingToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents shrinkToMarginsWhenPrintingToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem4 As ToolStripSeparator
+    Private WithEvents deleteCurrentPageToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents rotateCurrentPageToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents rotate0ToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents rotate90ToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents rotate180ToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents rotate270ToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem5 As ToolStripSeparator
+    Private WithEvents showRangeOfPagesToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents toolStripMenuItem6 As ToolStripSeparator
+    Private WithEvents informationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class
