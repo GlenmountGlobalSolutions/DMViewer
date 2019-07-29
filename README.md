@@ -15,3 +15,5 @@ The following command opens PDF file "S120ListManual.pdf" and searches for text 
 
 ## Executable Files
 The latest executable files can be found under releases.
+https://github.com/GlenmountGlobalSolutions/DMViewer/releases
+
