@@ -12,3 +12,6 @@ DMViewer.exe *\<PDF File to Open\>* /S=*\<Search Text\>* /P=*\<Start Page\>* /T=
 The following command opens PDF file "S120ListManual.pdf" and searches for text "F06300" starting at page 2391. Setting the start page helps when the search text is referenced earlier in the document in an unrelated section. For instance, if you want to search for drive fault codes, you should set the start page to the first page of the drive fault code chapter or section.
 
 ```DMViewer.exe S120ListManual.pdf /S=F06300 /P=2391```
+
+## Executable Files
+The latest executable files can be found under releases.
