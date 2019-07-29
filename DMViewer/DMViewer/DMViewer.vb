@@ -60,10 +60,6 @@ Public Class DMViewer
             renderToBitmapsToolStripMenuItem.Enabled = True
             Viewer.ZoomMode = PdfViewerZoomMode.FitWidth
             Viewer.Renderer.Zoom = 1
-
-            If _StartPage <> 0 Then
-                Viewer.Renderer.Page = _StartPage
-            End If
             _search = New PdfSearchManager(Viewer.Renderer)
             Timer1.Interval = _TimeDelay
             Timer1.Start()
@@ -102,6 +98,10 @@ Public Class DMViewer
     End Function
 
     Private Sub DoSearch(_SearchText As String)
+        If _StartPage <> 0 Then
+            Viewer.Renderer.Page = _StartPage
+            _StartPage = 0
+        End If
         If _SearchText <> String.Empty Then
             If Not _search.Search(_SearchText) Then
                 MessageBox.Show(Me, "No matches found.")
