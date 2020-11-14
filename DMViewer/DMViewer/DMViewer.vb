@@ -121,8 +121,8 @@ Public Class DMViewer
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If Not _TimerTicked Then
-            DoSearch(_SearchTerm)
             _TimerTicked = True
+            DoSearch(_SearchTerm)
         End If
 
     End Sub
