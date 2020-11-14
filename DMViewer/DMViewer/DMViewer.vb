@@ -10,7 +10,7 @@ Public Class DMViewer
     Private _WholeWord As Boolean = True
     Private _StartPage As Integer = 0
     Private _TimerTicked As Boolean = False
-    Private _TimeDelay As Integer = 50
+    Private _TimeDelay As Integer = 500
     Private Sub DMViewer_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'Hide the message label
@@ -57,14 +57,17 @@ Public Class DMViewer
         If _FileToOpen <> String.Empty Then
             Viewer.Document?.Dispose()
             Viewer.Document = OpenDocument(_FileToOpen)
-            renderToBitmapsToolStripMenuItem.Enabled = True
-            Viewer.ZoomMode = PdfViewerZoomMode.FitWidth
-            Viewer.Renderer.Zoom = 1
-            _search = New PdfSearchManager(Viewer.Renderer)
-            Timer1.Interval = _TimeDelay
-            Timer1.Start()
+            If Viewer.Document IsNot Nothing Then
+                renderToBitmapsToolStripMenuItem.Enabled = True
+                Viewer.ZoomMode = PdfViewerZoomMode.FitWidth
+                Viewer.Renderer.Zoom = 1
+                _search = New PdfSearchManager(Viewer.Renderer)
+                Timer1.Interval = _TimeDelay
+                Timer1.Start()
+            End If
+
         Else
-            OpenFile()
+                OpenFile()
         End If
 
     End Sub
@@ -86,6 +89,7 @@ Public Class DMViewer
         renderToBitmapsToolStripMenuItem.Enabled = True
         Viewer.ZoomMode = PdfViewerZoomMode.FitWidth
         Viewer.Renderer.Zoom = 1
+        _search = New PdfSearchManager(Viewer.Renderer)
     End Sub
 
     Private Function OpenDocument(fileName As String) As PdfDocument
@@ -121,5 +125,9 @@ Public Class DMViewer
             _TimerTicked = True
         End If
 
+    End Sub
+
+    Private Sub openToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles openToolStripMenuItem.Click
+        OpenFile()
     End Sub
 End Class
